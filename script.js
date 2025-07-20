@@ -1,3 +1,6 @@
+
+
+
 // Obtém o canvas (área de desenho) e o contexto 2D para desenhar nele
 const canvas = document.getElementById("particleCanvas");
 const ctx = canvas.getContext("2d");
@@ -172,13 +175,7 @@ function escreverNome() {
   digitarNome();
 }
 
-// Inicia a animação assim que a página carrega
 
-/*document.addEventListener('mousemove', function(info){
-   
-    cursor.style.left = info.clientX + 'px'
-    cursor.style.top = info.clientY + 'px'
-})*/
 
 // Obter o botão
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");

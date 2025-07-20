@@ -181,21 +181,124 @@ header a:hover::after {
 
 
 
+
 .botao {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #4d7cfe;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
-    text-decoration: none;
-
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #4d7cfe;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
 }
 
+/* Efeito hover */
 .botao:hover {
-    opacity: 0.8;
+  background: #1855fc;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow:
+    0 0 5px #1855fc,
+    0 0 25px #1855fc,
+    0 0 50px #1855fc,
+    0 0 100px #1855fc;
 }
+
+/* Span base */
+.botao span {
+  position: absolute;
+  display: block;
+}
+
+/* Topo */
+.botao span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1855fc);
+  animation: anim-top 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+/* Direita */
+.botao span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #1855fc);
+  animation: anim-right 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+/* Base */
+.botao span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #1855fc);
+  animation: anim-bottom 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+/* Esquerda */
+.botao span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(0deg, transparent, #1855fc);
+  animation: anim-left 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+/* Animações */
+@keyframes anim-top {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes anim-right {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes anim-bottom {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes anim-left {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
 
 .titulo-secao {
     font-size: 42px;
@@ -430,58 +533,65 @@ header a:hover::after {
 
 }*/
 
-.grade-skils {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+.carrossel-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+}
 
+.carrossel-skils {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .card-skils {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #20202056;
-
-    border-radius: 10px;
-    overflow: hidden;
+  flex: 0 0 auto;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+  border-radius: 10px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
 }
 
 .card-skils:hover {
-    backdrop-filter: blur(5px);
-    background-color: #4b4b4b52;
+  backdrop-filter: blur(5px);
+ 
+  transform: scale(1.15);
+  cursor: pointer;
 }
 
-.info-skills{
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.info-skills h3{
-     margin-bottom: 20px;
-    color: #ffffff;
-    font-size: 20px;
-
-}
-.info-skills p {
-   text-align: center;
+.card-skils h3 {
+  margin-top: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
 }
 
 .img-skils {
-    margin-top: 20px;
-    width: 50px;
+  width: 50px;
 }
 
 .img {
-    width: 100px;
+  width: 100px;
 }
 .imgg {
-    width: 200px;
-    margin-top: 0;
+  width: 130px;
 }
 
 
@@ -755,7 +865,7 @@ img {
         align-items: center;
         justify-content: center;
         font-size: 15px;
-        height: 20px;
+        height: 40px;
         width: auto;
         margin-bottom: 20px;
       
@@ -843,10 +953,12 @@ img {
     left: 0px;
    }
 
-   .curriculo button {
+   .curriculo a {
       width: 150px;
-      height: 30px;
+      height: 50px;
       font-size: 15px;
+      position: relative;
+      top: 50px;
 }
    
 
@@ -864,7 +976,7 @@ img {
 .card-projeto {
    
     backdrop-filter: blur(5px);
-    background-color: #fff9f956;
+    background-color: #fffffff8;
     width: 80%;
 
     border-radius: 10px;
@@ -907,7 +1019,7 @@ img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #fff9f956;
+  
 }
 
 .info-skills{
@@ -959,7 +1071,7 @@ img {
         align-items: center;
         justify-content: center;
         font-size: 15px;
-        height: 30px;
+        height: 50px;
         width: 150px;
         margin-bottom: 20px;
         text-align: center;

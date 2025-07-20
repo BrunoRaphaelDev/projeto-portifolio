@@ -8,6 +8,9 @@
     <link rel="shortcut icon" href="./assets/icon2.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 
+
+
+
 </head>
 
 <body>
@@ -46,9 +49,16 @@
 
         <div class="title">
             <h1 id="typing">Olá, eu sou <span>Bruno Raphael</span>.</h1>
-            <p>Desenvolvedor Frontend em formação, especializado em criação de interfaces responsivas e acessíveis. Em
+            <p>Desenvolvedor Frontend, especializado em criação de interfaces responsivas e acessíveis. Em
                 constante evolução para me tornar um profissional completo e de alto nível técnico.</p>
-            <a class="botao efeito-cursor" href="#projects">Ver Projetos</a>
+            <a class="botao efeito-cursor" href="#projects">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Ver Projetos
+            </a>
+
 
         </div>
 
@@ -78,10 +88,14 @@
         </div>
         <div class="curriculo">
 
-            <a href="./assets/CURRICULO-BRUNO RAPHAEL DOS SANTOS .pdf"
-                download="CURRICULO-BRUNO RAPHAEL DOS SANTOS.pdf">
-                <button>Baixar CV
-                </button></a>
+          <a class="botao efeito-cursor " href="./assets/CURRICULO-BRUNO RAPHAEL DOS SANTOS .pdf" download="CURRICULO-BRUNO RAPHAEL DOS SANTOS.pdf">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  Baixar CV
+</a>
+
         </div>
 
     </section>
@@ -483,136 +497,81 @@
 
     <section id="skils" class="secao">
         <h2 class="titulo-secao">Conhecimentos</h2>
-        <div class="grade-skils">
-            <div class="card-skils efeito-cursor">
-                <img class="img-skils" src="./assets/html5.svg">
-                <div class="info-skills">
+        <div class="carrossel-container">
+            <div class="carrossel-skils">
+                <!-- Repetir os cards duas vezes para loop infinito -->
+                <div class="card-skils"><img class="img-skils" src="./assets/html5.svg" alt="HTML5">
                     <h3>HTML5</h3>
-                    <p>HTML (HyperText Markup Language) é a linguagem de marcação usada para estruturar páginas da web.
-                        Ele define elementos como títulos, parágrafos, imagens, links e botões, permitindo a criação de
-                        sites.</p>
-
                 </div>
-            </div>
-
-            <div class="card-skils efeito-cursor">
-                <img class="img-skils" src="./assets/css3.svg">
-                <div class="info-skills">
+                <div class="card-skils"><img class="img-skils" src="./assets/css3.svg" alt="CSS3">
                     <h3>CSS3</h3>
-                    <p>CSS3 (Cascading Style Sheets 3) é uma linguagem de estilos usada para definir a
-                        aparência de páginas HTML. Ele permite personalizar cores, fontes, espaçamentos, animações e
-                        layouts, tornando os sites mais bonitos e responsivos.</p>
-
                 </div>
-            </div>
-
-            <div class="card-skils efeito-cursor">
-                <img class="img-skils" src="./assets/js.svg">
-                <div class="info-skills">
+                <div class="card-skils"><img class="img-skils" src="./assets/js.svg" alt="JavaScript">
                     <h3>JavaScript</h3>
-                    <p>JavaScript é uma linguagem de programação voltada para a criação de interatividade em páginas
-                        web. Com ele, é possível manipular elementos HTML, responder a eventos do usuário, criar
-                        animações, validar formulários e até desenvolver aplicações completas no frontend e backend.</p>
-
                 </div>
-            </div>
-
-            <div class="card-skils efeito-cursor">
-                <img class="img-skils img" src="./assets/Node.js_logo.svg">
-                <div class="info-skills">
+                <div class="card-skils"><img class="img-skils img" src="./assets/Node.js_logo.svg" alt="Node.Js">
                     <h3>Node.Js</h3>
-                    <p>Node.js é uma plataforma que permite executar JavaScript no servidor, facilitando a criação de
-                        aplicações rápidas e escaláveis. É amplamente utilizado para desenvolver servidores web, APIs, e
-                        aplicações em tempo real.</p>
-
                 </div>
-            </div>
-
-            <div class="card-skils efeito-cursor">
-                <img class="img-skils img " src="./assets/react.svg">
-                <div class="info-skills">
+                <div class="card-skils"><img class="img-skils img" src="./assets/react.svg" alt="React">
                     <h3>React</h3>
-                    <p>React é uma biblioteca JavaScript para criar interfaces de usuário interativas e dinâmicas,
-                        utilizando componentes reutilizáveis. Ele permite construir aplicações rápidas e eficientes com
-                        atualizações rápidas por meio do DOM virtual. Ideal para aplicações de página única (SPA).</p>
-
                 </div>
-            </div>
-
-            <div class="card-skils efeito-cursor">
-                <img class="img-skils img" src="./assets/TS.png">
-                <div class="info-skills">
-                    <h3>TypeScipt</h3>
-                    <p>TypeScript é uma linguagem de programação baseada em JavaScript, mas com tipagem estática. Ela
-                        adiciona tipos ao código, o que ajuda a detectar erros antes da execução, tornando o
-                        desenvolvimento mais seguro e organizado. É compilada para JavaScript, garantindo
-                        compatibilidade com qualquer ambiente.</p>
-
+                <div class="card-skils"><img class="img-skils img" src="./assets/TS.png" alt="TypeScript">
+                    <h3>TypeScript</h3>
                 </div>
-            </div>
-
-            <div class="card-skils efeito-cursor">
-                <img class="img-skils img" src="./assets/bootstrap.png">
-                <div class="info-skills">
+                <div class="card-skils"><img class="img-skils img" src="./assets/bootstrap.png" alt="Bootstrap">
                     <h3>Bootstrap</h3>
-                    <p>O Bootstrap é um framework front-end que facilita a criação de sites responsivos e modernos,
-                        oferecendo um sistema de grid, estilos prontos e componentes interativos como botões e modais.
-                        Ele agiliza o desenvolvimento e melhora a aparência das interfaces.</p>
-
                 </div>
-            </div>
-
-            <div class="card-skils efeito-cursor">
-                <img class="img-skils img" src="./assets/github.svg">
-                <div class="info-skills">
-                    <h3>Git Hub</h3>
-                    <p>O GitHub é uma plataforma de hospedagem de código que usa Git para controle de versão. Ele
-                        permite colaboração, gerenciamento de projetos e armazenamento de repositórios, facilitando o
-                        desenvolvimento e o trabalho em equipe.</p>
-
+                <div class="card-skils"><img class="img-skils img" src="./assets/github.svg" alt="GitHub">
+                    <h3>GitHub</h3>
                 </div>
-            </div>
-
-            <div class="card-skils efeito-cursor">
-                <img class="img-skils img" src="./assets/JWT.png">
-                <div class="info-skills">
-                    <h3>Atenticação JWT</h3>
-                    <p>A autenticação JWT (JSON Web Token) é um padrão para autenticação e autorização, que permite que
-                        um servidor verifique a identidade de um usuário sem precisar armazenar informações sobre ele. O
-                        JWT funciona como um "passe digital", contendo informações sobre o usuário (como permissões e
-                        identificação) de forma codificada e assinada. </p>
-
-
+                <div class="card-skils"><img class="img-skils img" src="./assets/JWT.png" alt="JWT">
+                    <h3>JWT</h3>
                 </div>
-            </div>
-
-            <div class="card-skils efeito-cursor">
-                <img class="img-skils imgg" src="./assets/vite.png">
-                <div class="info-skills">
+                <div class="card-skils"><img class="img-skils imgg" src="./assets/vite.png" alt="Vite">
                     <h3>Vite</h3>
-                    <p> Vite é uma ferramenta moderna de construção (build tool) para desenvolvimento front-end que visa
-                        proporcionar uma experiência de desenvolvimento mais rápida e eficiente para projetos web.
-                    </p>
-
-
                 </div>
-            </div>
-
-
-            <div class="card-skils efeito-cursor">
-                <img class="img-skils imgg" src="./assets/git.png">
-                <div class="info-skills">
+                <div class="card-skils"><img class="img-skils imgg" src="./assets/git.png" alt="Git">
                     <h3>Git</h3>
-                    <p> O Git é um sistema de controle de versão distribuído, gratuito e de código aberto, utilizado
-                        para rastrear e gerenciar alterações em projetos de código-fonte.
-                    </p>
+                </div>
 
-
+                <!-- DUPLICADO para animação contínua -->
+                <div class="card-skils"><img class="img-skils" src="./assets/html5.svg" alt="HTML5">
+                    <h3>HTML5</h3>
+                </div>
+                <div class="card-skils"><img class="img-skils" src="./assets/css3.svg" alt="CSS3">
+                    <h3>CSS3</h3>
+                </div>
+                <div class="card-skils"><img class="img-skils" src="./assets/js.svg" alt="JavaScript">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="card-skils"><img class="img-skils img" src="./assets/Node.js_logo.svg" alt="Node.Js">
+                    <h3>Node.Js</h3>
+                </div>
+                <div class="card-skils"><img class="img-skils img" src="./assets/react.svg" alt="React">
+                    <h3>React</h3>
+                </div>
+                <div class="card-skils"><img class="img-skils img" src="./assets/TS.png" alt="TypeScript">
+                    <h3>TypeScript</h3>
+                </div>
+                <div class="card-skils"><img class="img-skils img" src="./assets/bootstrap.png" alt="Bootstrap">
+                    <h3>Bootstrap</h3>
+                </div>
+                <div class="card-skils"><img class="img-skils img" src="./assets/github.svg" alt="GitHub">
+                    <h3>GitHub</h3>
+                </div>
+                <div class="card-skils"><img class="img-skils img" src="./assets/JWT.png" alt="JWT">
+                    <h3>JWT</h3>
+                </div>
+                <div class="card-skils"><img class="img-skils imgg" src="./assets/vite.png" alt="Vite">
+                    <h3>Vite</h3>
+                </div>
+                <div class="card-skils"><img class="img-skils imgg" src="./assets/git.png" alt="Git">
+                    <h3>Git</h3>
                 </div>
             </div>
         </div>
-
     </section>
+
 
 
     <section id="contato" class="secao">
